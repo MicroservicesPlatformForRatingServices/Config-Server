@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: CONFIG-SERVICE
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/boy-lucifier/hotelRatingsProjectConfigurations/
+          clone-on-start: true
+          username: boy-lucifier
+          password: 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
+          timeout: 50000
+          default-label: main
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8766/eureka/
+  instance:
+    prefer-ip-address: true
+
+server:
+  port: 8088
